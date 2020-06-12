@@ -1,6 +1,4 @@
-import Head from 'next/head';
 import Layout from '../../components/Layout/index';
-import { useState } from 'react';
 import useCustomForm from '../../hooks/useCustomForm';
 
 type Product = {
@@ -23,7 +21,6 @@ export const Nuevo = (): JSX.Element => {
         errors,
         touched,
         handleChange,
-        handleChangeTextArea,
         handleBlur,
         handleSubmit
     } = useCustomForm({initialValues: product, 
@@ -56,7 +53,7 @@ export const Nuevo = (): JSX.Element => {
                         <div className="field">
                             <div className="control">
                                 <p>Descripción</p>
-                                <textarea className="textarea is-primary" placeholder="e.g. Hello world" name="description" value={values.description} onChange={handleChangeTextArea}></textarea>
+                                <textarea className="textarea is-primary" placeholder="e.g. Hello world" name="description" value={values.description} onChange={handleChange}></textarea>
                             </div>
                         </div>
                     </div>
