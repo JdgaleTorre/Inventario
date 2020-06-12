@@ -1,0 +1,21 @@
+// We can import bulma into the project using Sass.
+$footer-padding: 1.5rem 6rem;
+@import "node_modules/bulma/bulma.sass";
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.workingArea {
+    top: 3.15rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+.offset {
+    position: absolute;
+    top: 0;
+}
